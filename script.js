@@ -1,5 +1,12 @@
 function isPalindrome(str){
-    /* Seu código aqui */
+    let frase=str.toLowerCase()
+    let fraseInvertida=frase.split("").reverse().join("");
+    if(frase===fraseInvertida){
+        return true;
+    }else{
+        return false;
+    }
+    
 }
 
 function arrayMaxMin(arr){
