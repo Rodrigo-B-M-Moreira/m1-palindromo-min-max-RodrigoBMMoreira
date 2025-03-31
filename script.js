@@ -1,14 +1,23 @@
-function isPalindrome(str){
-    let frase=str.toLowerCase().replace(/[^a-z0-9]/g, "");
-    let fraseInvertida=frase.split("").reverse().join("");
-    if(frase===fraseInvertida){
-        return true;
-    }else{
-        return false;
+function isPalindrome(str) {
+    let frase = str.toLowerCase();
+    let fraseLimpa = "";
+    for (let i = 0; i < frase.length; i++) {
+        let char = frase[i];
+        if ((char >= 'a' && char <= 'z') || (char >= '0' && char <= '9')) {
+            fraseLimpa += char;
+        }
     }
-    
+    let tamanho = fraseLimpa.length;
+    for (let i = 0; i < tamanho / 2; i++) { 
+        if (fraseLimpa[i] !== fraseLimpa[tamanho - 1 - i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
-function arrayMaxMin(arr){
+
+
+function arrayMaxMin(arr) {
     /* Seu código aqui */
 }
