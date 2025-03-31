@@ -8,7 +8,7 @@ function isPalindrome(str) {
         }
     }
     let tamanho = fraseLimpa.length;
-    for (let i = 0; i < tamanho / 2; i++) { 
+    for (let i = 0; i < tamanho / 2; i++) {
         if (fraseLimpa[i] !== fraseLimpa[tamanho - 1 - i]) {
             return false;
         }
@@ -19,5 +19,18 @@ function isPalindrome(str) {
 
 
 function arrayMaxMin(arr) {
-    /* Seu código aqui */
+    let max = arr[0];
+    let min = arr[0];
+
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+
+    return [min, max];
 }
+
